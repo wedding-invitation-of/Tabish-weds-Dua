@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#E9D9C2">
+  <title>Our Engagement — You're Cordially Invited</title>
+  <meta name="description" content="You're cordially invited to our engagement celebration.">
+  <meta property="og:title" content="Our Engagement — You're Cordially Invited">
+  <meta property="og:description" content="Join us as we celebrate the beginning of our forever.">
+  <meta property="og:image" content="assets/door-left.jpg">
+
+  <!-- Fonts (fall back gracefully to system serif/cursive when offline) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <link rel="preload" as="image" href="assets/door-left.jpg">
+  <link rel="preload" as="image" href="assets/door-right.jpg">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.className += ' js';</script>
+</head>
+<body class="is-locked">
+
+<!-- ======================================================================
+     SVG SYMBOLS (reused ornaments)
+     ====================================================================== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="goldLeaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d9bd8a"/><stop offset=".55" stop-color="#b58a50"/><stop offset="1" stop-color="#80501F"/>
+    </linearGradient>
+    <!-- Botanical sprig: stem + leaves -->
+    <symbol id="sprig" viewBox="0 0 160 260">
+      <g fill="url(#goldLeaf)" stroke="none">
+        <path d="M80 258 C78 200 82 140 100 60 C101 50 103 40 108 30" fill="none" stroke="#9a6d3a" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M89 170 C58 160 38 138 36 112 C62 116 84 138 89 170Z"/>
+        <path d="M91 140 C122 134 142 112 144 86 C118 90 96 112 91 140Z"/>
+        <path d="M86 108 C60 98 46 78 46 56 C68 62 84 82 86 108Z" opacity=".9"/>
+        <path d="M96 84 C120 76 132 58 132 38 C112 44 98 62 96 84Z" opacity=".9"/>
+        <path d="M101 54 C88 44 84 28 90 12 C102 22 106 38 101 54Z" opacity=".85"/>
+        <path d="M84 208 C54 206 30 190 24 166 C52 168 76 184 84 208Z" opacity=".8"/>
+        <path d="M82 230 C108 226 128 208 130 186 C104 190 86 206 82 230Z" opacity=".8"/>
+      </g>
+    </symbol>
+    <!-- Tiny diamond -->
+    <symbol id="diamond" viewBox="0 0 10 10"><path d="M5 0 10 5 5 10 0 5Z" fill="currentColor"/></symbol>
+    <!-- Icons -->
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2v2H5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7Zm-2 8h14v9H5v-9Z"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><path fill="currentColor" d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.3-3.3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 22v-8.5h2.9l.5-3.4h-3.4V8c0-1 .3-1.7 1.8-1.7H17V3.3C16.700 3.250 15.600 3.100 14.400 3.100c-2.700 0-4.400 1.600-4.400 4.500v2.500H7v3.400h3V22h3.500Z"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.600 15L2 22l5.200-1.400A10 10 0 1 0 12 2Zm0 1.900a8.100 8.100 0 1 1-4.300 15l-.3-.2-3 .8.8-2.900-.2-.3A8.100 8.100 0 0 1 12 3.900Zm-3 3.900c-.2 0-.5.100-.7.400-.3.300-1 1-1 2.400s1 2.800 1.200 3c.1.200 2 3.200 5 4.400 2.400.9 2.900.7 3.400.7.500-.1 1.700-.7 1.900-1.400.2-.7.200-1.200.2-1.400-.1-.1-.3-.2-.6-.4l-1.900-.9c-.3-.1-.5-.1-.7.100l-.9 1.100c-.2.200-.3.200-.6.100-.3-.1-1.200-.4-2.300-1.400-.8-.8-1.400-1.700-1.600-2-.2-.3 0-.4.100-.6l.5-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.200c-.2-.5-.5-.5-.7-.5Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 3.200V18h16V7.200l-8 5.300-8-5.300ZM5.200 6 12 10.500 18.800 6H5.200Z"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="m9 4 8 8-8 8"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M5 5l14 14M19 5 5 19"/></symbol>
+  </defs>
+</svg>
+
+<!-- ======================================================================
+     1. OPENING SCREEN — ROYAL DOUBLE DOORS
+     ====================================================================== -->
+<div class="gate" id="gate" role="button" tabindex="0" aria-label="Tap to open your invitation">
+  <div class="gate__stage">
+    <div class="gate__light" aria-hidden="true"></div>
+    <div class="door door--left"  aria-hidden="true"><span class="door__shade"></span></div>
+    <div class="door door--right" aria-hidden="true"><span class="door__shade"></span></div>
+
+    <!-- Golden wax seal (initials come from CONFIG) -->
+    <button class="seal" id="seal" type="button" aria-label="Open invitation">
+      <span class="seal__ring"></span>
+      <span class="seal__disc"><span class="seal__text" data-t="sealText">T&amp;D</span></span>
+    </button>
+
+    <p class="gate__hint" id="gateHint"><span class="gate__hint-dot"></span>Tap to Open Your Invitation</p>
+  </div>
+</div>
+
+<!-- Floating rose petals (generated by script.js) -->
+<div class="petals" id="petals" aria-hidden="true"></div>
+
+<!-- ======================================================================
+     NAVIGATION
+     ====================================================================== -->
+<header class="nav" id="nav">
+  <a class="nav__mono" href="#home" data-t="initials" aria-label="Back to top">T &amp; D</a>
+  <button class="nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="nav__menu" id="navMenu" aria-label="Sections">
+    <img class="nav__orn" src="assets/orn-fleur-top.png" alt="" width="180" height="80">
+    <a href="#home">Invitation</a>
+    <a href="#countdown">Countdown</a>
+    <a href="#families">Our Families</a>
+    <a href="#celebration">The Celebration</a>
+    <a href="#story">Our Love Story</a>
+    <a href="#moments">Our Moments</a>
+    <a href="#rsvp">RSVP</a>
+  </nav>
+</header>
+
+<main class="page" id="page">
+
+  <!-- ====================================================================
+       2. HERO — OUR ENGAGEMENT
+       ==================================================================== -->
+  <section class="hero" id="home">
+    <div class="hero__damask hero__damask--l" aria-hidden="true"></div>
+    <div class="hero__damask hero__damask--r" aria-hidden="true"></div>
+    <div class="hero__border" aria-hidden="true"></div>
+
+    <svg class="sprig sprig--tr sway" aria-hidden="true"><use href="#sprig"/></svg>
+    <svg class="sprig sprig--bl sway sway--b" aria-hidden="true"><use href="#sprig"/></svg>
+    <img class="hero__fleur" src="assets/orn-fleur-top.png" alt="" width="360" height="161">
+    <span class="sparkle sp1" aria-hidden="true"></span><span class="sparkle sp2" aria-hidden="true"></span>
+    <span class="sparkle sp3" aria-hidden="true"></span><span class="sparkle sp4" aria-hidden="true"></span>
+
+    <div class="hero__inner">
+      <p class="eyebrow stg" style="--d:.1s">Together Forever</p>
+      <h1 class="script script--xl stg" style="--d:.25s">Our Engagement</h1>
+
+      <!-- Ornate golden oval frame with illustrated couple -->
+      <figure class="frame stg stg--zoom" style="--d:.45s">
+        <div class="frame__aperture" id="coupleAperture">
+          <!-- Faceless illustrated couple (replaced by CONFIG.couplePhoto if provided) -->
+          <svg class="couple" id="coupleArt" viewBox="0 0 200 240" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of an engaged couple">
+            <defs>
+              <linearGradient id="cBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7ece4"/><stop offset="1" stop-color="#ecd9c6"/></linearGradient>
+              <linearGradient id="cDress" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ddd1d9"/></linearGradient>
+              <linearGradient id="cSher" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3e3c7"/><stop offset="1" stop-color="#d9bd8d"/></linearGradient>
+              <linearGradient id="cSofa" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ead8bd"/><stop offset="1" stop-color="#cdb08a"/></linearGradient>
+              <radialGradient id="cGlow" cx=".5" cy=".55" r=".6"><stop offset="0" stop-color="#fff6e6" stop-opacity=".9"/><stop offset="1" stop-color="#fff6e6" stop-opacity="0"/></radialGradient>
+            </defs>
+            <rect width="200" height="240" fill="url(#cBg)"/>
+            <!-- curtains -->
+            <g opacity=".85">
+              <path d="M0 0h70c-8 40-6 80 0 120H0Z" fill="#fffaf3"/>
+              <path d="M130 0h70v120h-70c6-40 8-80 0-120Z" fill="#fffaf3"/>
+              <path d="M18 0c-6 40-4 80 2 120M40 0c-5 40-3 80 2 120M160 0c5 40 3 80-2 120M182 0c6 40 4 80-2 120" stroke="#eadccd" stroke-width="1.2" fill="none"/>
+            </g>
+            <rect width="200" height="240" fill="url(#cGlow)"/>
+            <!-- flowers behind sofa -->
+            <g>
+              <rect x="30" y="118" width="140" height="10" rx="2" fill="#b98f5c" opacity=".55"/>
+              <g fill="#f3b9c0"><circle cx="50" cy="104" r="9"/><circle cx="72" cy="98" r="8"/><circle cx="128" cy="100" r="9"/><circle cx="152" cy="106" r="8"/></g>
+              <g fill="#fff4ee"><circle cx="60" cy="112" r="9"/><circle cx="86" cy="106" r="9"/><circle cx="114" cy="108" r="9"/><circle cx="140" cy="114" r="8"/><circle cx="100" cy="98" r="8"/></g>
+              <g fill="#f7d3d1"><circle cx="40" cy="112" r="7"/><circle cx="162" cy="116" r="7"/><circle cx="76" cy="112" r="6"/><circle cx="124" cy="116" r="6"/></g>
+              
+              
+            </g>
+            <!-- sofa -->
+            <path d="M16 126c0-12 10-18 22-18h124c12 0 22 6 22 18v114H16Z" fill="url(#cSofa)"/>
+            <path d="M16 170h168" stroke="#bf9c70" stroke-width="1" opacity=".5"/>
+
+            <!-- BRIDE (left) -->
+            <g class="bride">
+              <path d="M56 70c-14 6-18 30-14 56 3 20 2 32-6 46 18 4 34-4 38-22-8-8-6-28 0-42-2-24-8-36-18-38Z" fill="#3a2418"/>
+              <path d="M54 66c20-8 40 4 42 26l6 64c-20 12-52 14-62 2 6-26 10-58 14-92Z" fill="#fff" opacity=".7"/>
+              <path d="M44 150c4-18 14-30 32-34l20 10c8 20 12 50 14 114H18c4-40 8-70 26-90Z" fill="url(#cDress)"/>
+              <path d="M44 150c-8 14-14 40-18 90M64 128c-4 30-2 60 2 112M90 130c4 30 6 60 10 110" stroke="#c9bcc6" stroke-width="1" fill="none" opacity=".7"/>
+              <ellipse cx="68" cy="94" rx="14.500" ry="17.500" fill="#e9c6a6"/>
+              <path d="M52 90c4-16 28-20 32 0-4-6-10-10-18-10s-12 4-14 10Z" fill="#3a2418"/>
+              <path d="M50 88c-4 16 2 34 12 42l6 4-4-32Z" fill="#fff" opacity=".78"/>
+              <rect x="63" y="108" width="10" height="9" rx="3" fill="#e0b895"/>
+              <path d="M84 128c8 6 14 12 22 20" stroke="#e9c6a6" stroke-width="8" stroke-linecap="round" fill="none"/>
+              <path d="M52 118c10 8 26 8 36 0" stroke="#fff" stroke-width="2" fill="none" opacity=".9"/>
+              <circle cx="82" cy="104" r="1.800" fill="#fff"/><circle cx="54" cy="104" r="1.800" fill="#fff"/>
+            </g>
+
+            <!-- GROOM (right) -->
+            <g class="groom">
+              <path d="M104 150c10-24 40-26 52-6 10 18 8 46 6 96h-74c0-40 0-66 16-90Z" fill="url(#cSher)"/>
+              <path d="M130 134v106" stroke="#caa970" stroke-width="1.2" opacity=".8"/>
+              <g fill="#b58a50"><circle cx="130" cy="150" r="1.400"/><circle cx="130" cy="166" r="1.400"/><circle cx="130" cy="182" r="1.400"/><circle cx="130" cy="198" r="1.400"/></g>
+              <path d="M104 214c14-4 40-4 58 0l10 26H92Z" fill="#fbf7f1"/>
+              <path d="M90 190c18-10 52-10 76 0v50H90Z" fill="#fbf7f1" opacity=".95"/>
+              <rect x="124" y="118" width="14" height="14" rx="4" fill="#dcb592"/>
+              <ellipse cx="131" cy="102" rx="15" ry="18" fill="#e3bd9a"/>
+              <path d="M115 100c-2-22 8-32 24-30 12 2 18 12 16 24-4-8-10-12-18-12s-14 6-22 18Z" fill="#2c1b12"/>
+              <path d="M118 112c4 10 20 12 28 0-2 12-8 18-14 18s-12-6-14-18Z" fill="#2c1b12" opacity=".85"/>
+              <path d="M104 144c-8 6-14 12-22 8" stroke="url(#cSher)" stroke-width="10" stroke-linecap="round" fill="none"/>
+              <path d="M84 148l-6 4" stroke="#e3bd9a" stroke-width="8" stroke-linecap="round"/>
+              <circle cx="80" cy="150" r="3" fill="#fff8e0" opacity=".95"/>
+              <path d="M78 150l-4-5M80 147v-6M83 150l5-4" stroke="#fff" stroke-width=".8" opacity=".9"/>
+            </g>
+          </svg>
+          <img class="couple-photo" id="couplePhoto" alt="" hidden>
+        </div>
+        <img class="frame__img" src="assets/frame-oval.png" alt="" width="620" height="754">
+      </figure>
+
+      <p class="script script--md stg" style="--d:.7s">You&rsquo;re Cordially Invited</p>
+      <h2 class="names stg" style="--d:.85s" aria-label="Couple names">
+        <span data-t="firstName">Tabish</span>
+        <span class="names__amp" aria-hidden="true">&amp;</span>
+        <span data-t="secondName">Dua</span>
+      </h2>
+      <img class="divider stg" style="--d:1s" src="assets/orn-divider-1.png" alt="" width="623" height="86">
+
+      <div class="hero__details stg" style="--d:1.1s">
+        <p class="spaced" data-t="dayLine">Saturday &middot; 19 December 2026</p>
+        <p class="spaced spaced--sm" data-t="timeLine">At 7:30 PM</p>
+        <img class="divider divider--sm" src="assets/orn-divider-2.png" alt="" width="256" height="50">
+        <p class="venue-name" data-t="venueName">The Royal Palace Banquet</p>
+        <p class="spaced spaced--sm" data-t="venueCity">City, Country</p>
+      </div>
+
+      <a class="scroll-cue stg" style="--d:1.3s" href="#countdown" aria-label="Scroll down">
+        <span>Scroll</span><i></i>
+      </a>
+    </div>
+    <img class="hero__bottom-orn" src="assets/orn-bottom.png" alt="" width="420" height="159">
+  </section>
+
+  <!-- ====================================================================
+       3. COUNTDOWN
+       ==================================================================== -->
+  <section class="section countdown" id="countdown">
+    <img class="veil" src="assets/veil.png" alt="" width="493" height="382">
+    <div class="wrap reveal">
+      <p class="eyebrow">Save The Date</p>
+      <h2 class="script script--lg">Counting Down To Our Forever</h2>
+      <img class="divider" src="assets/orn-divider-1.png" alt="" width="623" height="86">
+
+      <div class="cd" id="cd" role="timer" aria-live="off">
+        <div class="cd__box"><span class="cd__num" data-unit="days">00</span><span class="cd__lbl">Days</span></div>
+        <div class="cd__box"><span class="cd__num" data-unit="hours">00</span><span class="cd__lbl">Hours</span></div>
+        <div class="cd__box"><span class="cd__num" data-unit="minutes">00</span><span class="cd__lbl">Minutes</span></div>
+        <div class="cd__box"><span class="cd__num" data-unit="seconds">00</span><span class="cd__lbl">Seconds</span></div>
+      </div>
+
+      <div class="cd-done" id="cdDone" hidden>
+        <p class="script script--md">Today Is The Day</p>
+        <p class="body-it">Our hearts are full and our forever begins. Thank you for celebrating with us.</p>
+      </div>
+      <p class="body-it cd__date" data-t="dateLong">Saturday, 19 December 2026</p>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       4. COUPLE & FAMILY
+       ==================================================================== -->
+  <section class="section families" id="families">
+    <img class="garland garland--top" src="assets/garland.png" alt="" width="513" height="257">
+    <div class="wrap reveal">
+      <p class="eyebrow">With The Blessings Of Our Families</p>
+      <h2 class="script script--lg">The Families</h2>
+      <img class="divider" src="assets/orn-divider-1.png" alt="" width="623" height="86">
+
+      <div class="fam">
+        <article class="fam__side">
+          <p class="eyebrow eyebrow--sm">The Groom</p>
+          <h3 class="script script--md" data-t="groomName">Tabish</h3>
+          <p class="body-it">Son of</p>
+          <p class="parents" data-t="groomParents">Mr. &amp; Mrs. Groom Parents</p>
+          <p class="family-name" data-t="groomFamily"></p>
+        </article>
+        <div class="fam__amp" aria-hidden="true"><svg><use href="#diamond"/></svg><span class="script">&amp;</span><svg><use href="#diamond"/></svg></div>
+        <article class="fam__side">
+          <p class="eyebrow eyebrow--sm">The Bride</p>
+          <h3 class="script script--md" data-t="brideName">Dua</h3>
+          <p class="body-it">Daughter of</p>
+          <p class="parents" data-t="brideParents">Mr. &amp; Mrs. Bride Parents</p>
+          <p class="family-name" data-t="brideFamily"></p>
+        </article>
+      </div>
+
+      <p class="body-it fam__invite">request the pleasure of your company<br>at the engagement of their children</p>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       5. ENGAGEMENT CEREMONY DETAILS
+       ==================================================================== -->
+  <section class="section celebration" id="celebration">
+    <img class="lantern lantern--l swing" src="assets/lanterns.png" alt="" width="205" height="330">
+    <img class="lantern lantern--r swing swing--b" src="assets/lanterns.png" alt="" width="205" height="330">
+    <svg class="sprig sprig--l sway" aria-hidden="true"><use href="#sprig"/></svg>
+    <svg class="sprig sprig--r sway sway--b" aria-hidden="true"><use href="#sprig"/></svg>
+
+    <div class="wrap reveal">
+      <p class="eyebrow">The Celebration</p>
+      <h2 class="script script--lg">Engagement Ceremony</h2>
+      <img class="divider" src="assets/orn-divider-1.png" alt="" width="623" height="86">
+
+      <div class="ticket">
+        <i class="ticket__c ticket__c--tl"></i><i class="ticket__c ticket__c--tr"></i><i class="ticket__c ticket__c--bl"></i><i class="ticket__c ticket__c--br"></i>
+        <img class="mosque" src="assets/mosque.png" alt="" width="200" height="197">
+        <dl class="facts">
+          <div><dt>Date</dt><dd data-t="dateLong">Saturday, 19 December 2026</dd></div>
+          <div><dt>Time</dt><dd data-t="timeRange">7:30 PM onwards</dd></div>
+          <div><dt>Venue</dt><dd class="facts__venue" data-t="venueName">The Royal Palace Banquet</dd></div>
+          <div><dt>Address</dt><dd data-t="venueAddress">Address line, City</dd></div>
+        </dl>
+        <div class="btns">
+          <a class="btn" id="mapBtn" href="#" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg><span>View Location</span></a>
+          <a class="btn btn--ghost" id="calBtn" href="#" download="engagement-invitation.ics"><svg><use href="#i-cal"/></svg><span>Add To Calendar</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       6. OUR LOVE STORY
+       ==================================================================== -->
+  <section class="section story" id="story">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">How It All Began</p>
+        <h2 class="script script--lg">Our Love Story</h2>
+        <img class="divider" src="assets/orn-divider-1.png" alt="" width="623" height="86">
+      </div>
+      <ol class="timeline" id="timeline"><!-- built by script.js --></ol>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       7. PHOTO GALLERY — CAPTURED LOVE
+       ==================================================================== -->
+  <section class="section moments" id="moments">
+    <div class="wrap reveal">
+      <p class="eyebrow">Our Moments</p>
+      <h2 class="script script--lg">Captured Love</h2>
+      <img class="divider" src="assets/orn-divider-1.png" alt="" width="623" height="86">
+    </div>
+
+    <div class="gal reveal" id="gallery" aria-roledescription="carousel" aria-label="Photo gallery">
+      <button class="gal__nav gal__nav--prev" id="galPrev" type="button" aria-label="Previous photo"><svg><use href="#i-chev"/></svg></button>
+      <div class="gal__track" id="galTrack" tabindex="0"><!-- built by script.js --></div>
+      <button class="gal__nav gal__nav--next" id="galNext" type="button" aria-label="Next photo"><svg><use href="#i-chev"/></svg></button>
+    </div>
+    <div class="gal__dots" id="galDots" aria-hidden="true"></div>
+  </section>
+
+  <!-- ====================================================================
+       8. RSVP
+       ==================================================================== -->
+  <section class="section rsvp" id="rsvp">
+    <img class="garland garland--top" src="assets/garland.png" alt="" width="513" height="257">
+    <div class="wrap wrap--narrow reveal">
+      <p class="eyebrow">Your Presence Is Requested</p>
+      <h2 class="script script--lg">Kindly RSVP</h2>
+      <p class="body-it">Your presence will make our celebration more special.</p>
+      <img class="divider" src="assets/orn-divider-1.png" alt="" width="623" height="86">
+
+      <form class="form" id="rsvpForm" novalidate>
+        <div class="field">
+          <label for="gName">Guest Name</label>
+          <input id="gName" name="name" type="text" autocomplete="name" placeholder="Your full name" required>
+          <small class="err" data-err="name">Please tell us your name.</small>
+        </div>
+        <div class="field">
+          <label for="gCount">Number of Guests</label>
+          <div class="select"><select id="gCount" name="guests"></select></div>
+        </div>
+        <fieldset class="field choice">
+          <legend>Attendance Confirmation</legend>
+          <label class="choice__opt"><input type="radio" name="attend" value="yes" checked><span>Joyfully Accept</span></label>
+          <label class="choice__opt"><input type="radio" name="attend" value="no"><span>Regretfully Decline</span></label>
+        </fieldset>
+        <div class="field">
+          <label for="gMsg">Message <em>(optional)</em></label>
+          <textarea id="gMsg" name="message" rows="3" placeholder="Share your wishes for the couple"></textarea>
+        </div>
+        <button class="btn btn--gold" type="submit"><svg><use href="#i-wa"/></svg><span>Send RSVP via WhatsApp</span></button>
+      </form>
+
+      <div class="thanks" id="thanks" hidden role="status">
+        <img class="divider" src="assets/orn-fleur-top.png" alt="" width="360" height="161">
+        <p class="script script--md">Thank You</p>
+        <p class="body-it" id="thanksMsg">Your response is on its way. We can&rsquo;t wait to celebrate with you.</p>
+        <button class="link" id="again" type="button">Send another response</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       9. FOOTER
+       ==================================================================== -->
+  <footer class="footer">
+    <img class="garland garland--foot" src="assets/garland.png" alt="" width="513" height="257">
+    <div class="wrap">
+      <p class="eyebrow">With Love</p>
+      <p class="initials script" data-t="initials">T &amp; D</p>
+      <img class="divider" src="assets/orn-divider-1.png" alt="" width="623" height="86">
+      <p class="spaced" data-t="dateShort">19 · 12 · 2026</p>
+      <ul class="social" id="social"></ul>
+      <p class="body-it foot__thanks">Thank you for being part of our story.<br>Your love and blessings mean the world to us.</p>
+      <img class="foot__orn" src="assets/orn-bottom.png" alt="" width="420" height="159">
+      <p class="tiny">Made with love</p>
+    </div>
+  </footer>
+</main>
+
+<!-- ======================================================================
+     LIGHTBOX
+     ====================================================================== -->
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb__close" id="lbClose" type="button" aria-label="Close"><svg><use href="#i-x"/></svg></button>
+  <button class="lb__nav lb__nav--prev" id="lbPrev" type="button" aria-label="Previous photo"><svg><use href="#i-chev"/></svg></button>
+  <figure class="lb__fig" id="lbFig"></figure>
+  <button class="lb__nav lb__nav--next" id="lbNext" type="button" aria-label="Next photo"><svg><use href="#i-chev"/></svg></button>
+  <p class="lb__count" id="lbCount"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
