@@ -93,7 +93,6 @@
     <a href="#countdown">Countdown</a>
     <a href="#families">Our Families</a>
     <a href="#celebration">The Celebration</a>
-    <a href="#story">Our Love Story</a>
     <a href="#moments">Our Moments</a>
     <a href="#rsvp">RSVP</a>
   </nav>
@@ -122,69 +121,7 @@
       <!-- Ornate golden oval frame with illustrated couple -->
       <figure class="frame stg stg--zoom" style="--d:.45s">
         <div class="frame__aperture" id="coupleAperture">
-          <!-- Faceless illustrated couple (replaced by CONFIG.couplePhoto if provided) -->
-          <svg class="couple" id="coupleArt" viewBox="0 0 200 240" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of an engaged couple">
-            <defs>
-              <linearGradient id="cBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7ece4"/><stop offset="1" stop-color="#ecd9c6"/></linearGradient>
-              <linearGradient id="cDress" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ddd1d9"/></linearGradient>
-              <linearGradient id="cSher" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3e3c7"/><stop offset="1" stop-color="#d9bd8d"/></linearGradient>
-              <linearGradient id="cSofa" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ead8bd"/><stop offset="1" stop-color="#cdb08a"/></linearGradient>
-              <radialGradient id="cGlow" cx=".5" cy=".55" r=".6"><stop offset="0" stop-color="#fff6e6" stop-opacity=".9"/><stop offset="1" stop-color="#fff6e6" stop-opacity="0"/></radialGradient>
-            </defs>
-            <rect width="200" height="240" fill="url(#cBg)"/>
-            <!-- curtains -->
-            <g opacity=".85">
-              <path d="M0 0h70c-8 40-6 80 0 120H0Z" fill="#fffaf3"/>
-              <path d="M130 0h70v120h-70c6-40 8-80 0-120Z" fill="#fffaf3"/>
-              <path d="M18 0c-6 40-4 80 2 120M40 0c-5 40-3 80 2 120M160 0c5 40 3 80-2 120M182 0c6 40 4 80-2 120" stroke="#eadccd" stroke-width="1.2" fill="none"/>
-            </g>
-            <rect width="200" height="240" fill="url(#cGlow)"/>
-            <!-- flowers behind sofa -->
-            <g>
-              <rect x="30" y="118" width="140" height="10" rx="2" fill="#b98f5c" opacity=".55"/>
-              <g fill="#f3b9c0"><circle cx="50" cy="104" r="9"/><circle cx="72" cy="98" r="8"/><circle cx="128" cy="100" r="9"/><circle cx="152" cy="106" r="8"/></g>
-              <g fill="#fff4ee"><circle cx="60" cy="112" r="9"/><circle cx="86" cy="106" r="9"/><circle cx="114" cy="108" r="9"/><circle cx="140" cy="114" r="8"/><circle cx="100" cy="98" r="8"/></g>
-              <g fill="#f7d3d1"><circle cx="40" cy="112" r="7"/><circle cx="162" cy="116" r="7"/><circle cx="76" cy="112" r="6"/><circle cx="124" cy="116" r="6"/></g>
-              
-              
-            </g>
-            <!-- sofa -->
-            <path d="M16 126c0-12 10-18 22-18h124c12 0 22 6 22 18v114H16Z" fill="url(#cSofa)"/>
-            <path d="M16 170h168" stroke="#bf9c70" stroke-width="1" opacity=".5"/>
-
-            <!-- BRIDE (left) -->
-            <g class="bride">
-              <path d="M56 70c-14 6-18 30-14 56 3 20 2 32-6 46 18 4 34-4 38-22-8-8-6-28 0-42-2-24-8-36-18-38Z" fill="#3a2418"/>
-              <path d="M54 66c20-8 40 4 42 26l6 64c-20 12-52 14-62 2 6-26 10-58 14-92Z" fill="#fff" opacity=".7"/>
-              <path d="M44 150c4-18 14-30 32-34l20 10c8 20 12 50 14 114H18c4-40 8-70 26-90Z" fill="url(#cDress)"/>
-              <path d="M44 150c-8 14-14 40-18 90M64 128c-4 30-2 60 2 112M90 130c4 30 6 60 10 110" stroke="#c9bcc6" stroke-width="1" fill="none" opacity=".7"/>
-              <ellipse cx="68" cy="94" rx="14.500" ry="17.500" fill="#e9c6a6"/>
-              <path d="M52 90c4-16 28-20 32 0-4-6-10-10-18-10s-12 4-14 10Z" fill="#3a2418"/>
-              <path d="M50 88c-4 16 2 34 12 42l6 4-4-32Z" fill="#fff" opacity=".78"/>
-              <rect x="63" y="108" width="10" height="9" rx="3" fill="#e0b895"/>
-              <path d="M84 128c8 6 14 12 22 20" stroke="#e9c6a6" stroke-width="8" stroke-linecap="round" fill="none"/>
-              <path d="M52 118c10 8 26 8 36 0" stroke="#fff" stroke-width="2" fill="none" opacity=".9"/>
-              <circle cx="82" cy="104" r="1.800" fill="#fff"/><circle cx="54" cy="104" r="1.800" fill="#fff"/>
-            </g>
-
-            <!-- GROOM (right) -->
-            <g class="groom">
-              <path d="M104 150c10-24 40-26 52-6 10 18 8 46 6 96h-74c0-40 0-66 16-90Z" fill="url(#cSher)"/>
-              <path d="M130 134v106" stroke="#caa970" stroke-width="1.2" opacity=".8"/>
-              <g fill="#b58a50"><circle cx="130" cy="150" r="1.400"/><circle cx="130" cy="166" r="1.400"/><circle cx="130" cy="182" r="1.400"/><circle cx="130" cy="198" r="1.400"/></g>
-              <path d="M104 214c14-4 40-4 58 0l10 26H92Z" fill="#fbf7f1"/>
-              <path d="M90 190c18-10 52-10 76 0v50H90Z" fill="#fbf7f1" opacity=".95"/>
-              <rect x="124" y="118" width="14" height="14" rx="4" fill="#dcb592"/>
-              <ellipse cx="131" cy="102" rx="15" ry="18" fill="#e3bd9a"/>
-              <path d="M115 100c-2-22 8-32 24-30 12 2 18 12 16 24-4-8-10-12-18-12s-14 6-22 18Z" fill="#2c1b12"/>
-              <path d="M118 112c4 10 20 12 28 0-2 12-8 18-14 18s-12-6-14-18Z" fill="#2c1b12" opacity=".85"/>
-              <path d="M104 144c-8 6-14 12-22 8" stroke="url(#cSher)" stroke-width="10" stroke-linecap="round" fill="none"/>
-              <path d="M84 148l-6 4" stroke="#e3bd9a" stroke-width="8" stroke-linecap="round"/>
-              <circle cx="80" cy="150" r="3" fill="#fff8e0" opacity=".95"/>
-              <path d="M78 150l-4-5M80 147v-6M83 150l5-4" stroke="#fff" stroke-width=".8" opacity=".9"/>
-            </g>
-          </svg>
-          <img class="couple-photo" id="couplePhoto" alt="" hidden>
+          <img class="couple-photo" id="couplePhoto" src="assets/couple.jpg" alt="The engaged couple" width="540" height="685" fetchpriority="high">
         </div>
         <img class="frame__img" src="assets/frame-oval.png" alt="" width="620" height="754">
       </figure>
@@ -297,20 +234,6 @@
           <a class="btn btn--ghost" id="calBtn" href="#" download="engagement-invitation.ics"><svg><use href="#i-cal"/></svg><span>Add To Calendar</span></a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ====================================================================
-       6. OUR LOVE STORY
-       ==================================================================== -->
-  <section class="section story" id="story">
-    <div class="wrap">
-      <div class="reveal">
-        <p class="eyebrow">How It All Began</p>
-        <h2 class="script script--lg">Our Love Story</h2>
-        <img class="divider" src="assets/orn-divider-1.png" alt="" width="623" height="86">
-      </div>
-      <ol class="timeline" id="timeline"><!-- built by script.js --></ol>
     </div>
   </section>
 

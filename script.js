@@ -25,7 +25,7 @@ const CONFIG = {
     initials: 'T & D',          // shown in the footer and the menu
     sealText: 'T&D',            // shown on the golden wax seal (keep it short)
     displayOrder: ['groom', 'bride'], // who is named first on the hero
-    couplePhoto: ''             // optional: 'assets/couple.jpg' replaces the illustration
+    couplePhoto: 'assets/couple.jpg' // portrait shown inside the golden oval frame
   },
 
   event: {
@@ -65,7 +65,7 @@ const CONFIG = {
 
   // Gallery photographs. Leave src '' to show an elegant placeholder.
   gallery: [
-    { src: '', caption: 'Our first photograph together' },
+    { src: 'assets/couple.jpg', caption: 'Our first photograph together' },
     { src: '', caption: 'Moments we adore' },
     { src: '', caption: 'Laughter and love' },
     { src: '', caption: 'Beginning of forever' },
@@ -134,8 +134,7 @@ function bindContent() {
 
   // Optional real couple photo replaces the illustration
   if (c.couple.couplePhoto) {
-    const img = $('#couplePhoto'); img.src = c.couple.couplePhoto; img.alt = `${first} and ${second}`; img.hidden = false;
-    $('#coupleArt').style.display = 'none';
+    const img = $('#couplePhoto'); img.src = c.couple.couplePhoto; img.alt = `${first} and ${second}`;
   }
   // Map + calendar links
   const q = encodeURIComponent(`${ev.venueName}, ${ev.venueAddress}`);
@@ -250,6 +249,7 @@ function initCountdown() {
    8. TIMELINE — our love story
    ========================================================================= */
 function initStory() {
+  if (!$('#timeline')) return; // Love Story section is currently removed (re-add the section in index.html to use it)
   $('#timeline').innerHTML = CONFIG.story.map((m, i) => `
     <li class="tl reveal ${i % 2 ? 'tl--r' : 'tl--l'}">
       <span class="tl__node" aria-hidden="true"></span>
